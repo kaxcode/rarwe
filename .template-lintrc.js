@@ -1,5 +1,7 @@
-'use strict';
-
 module.exports = {
-  extends: 'octane'
+  extends: "recommended",
+  rules: {
+    "no-triple-curlies": true,
+    "block-indentation": 4
+  }
 };
