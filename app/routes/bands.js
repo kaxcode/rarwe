@@ -1,4 +1,18 @@
 import Route from '@ember/routing/route';
+import EmberObject from '@ember/object';
+import { A } from '@ember/array';
+
+const Band = EmberObject.extend({
+  name: '',
+});
+  
 
 export default class BandsRoute extends Route {
+  model() {
+    let ledZeppelin = Band.create({name: 'Led Zeppelin'});
+    let pearJam = Band.create({name: 'Pearl Jam'});
+    let fooFighters = Band.create({name: 'Foo Fighters'});
+
+    return A([ledZeppelin, pearJam, fooFighters]);
+  }
 }
