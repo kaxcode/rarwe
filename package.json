@@ -55,6 +55,7 @@
     "edition": "octane"
   },
   "dependencies": {
-    "acorn": "^7.1.1"
+    "acorn": "^7.1.1",
+    "clean-css": "^4.1.11"
   }
 }
