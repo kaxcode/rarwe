@@ -1,7 +1,11 @@
-import EmberObject from '@ember/object';
+export default class Song {
+  title = '';
+  rating = 0;
+  band = '';
 
-export default EmberObject.exntend({
-  title: '',
-  rating: 0,
-  band: null
-})
+  constructor({title, rating, band}) {
+    this.title = title;
+    this.rating = rating;
+    this.band = band;
+  }
+}

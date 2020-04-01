@@ -1,12 +1,11 @@
-import EmberObject from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
-export default EmberObject.extend({
-  name: '',
+export default class Band {
+  @tracked name;
 
-  init() {
-    this._super(...arguments);
-    if (!this.songs) {
-      this.set('songs', [])
-    }
+  constructor({name, slug, songs}) {
+    this.name = name;
+    this.slug = slug;
+    this.songs = songs;
   }
-});
+}
