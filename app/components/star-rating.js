@@ -15,6 +15,6 @@ export default class StarRatingComponent extends Component {
       })
     }
 
-    return stars;
+    return stars
   }
 }
