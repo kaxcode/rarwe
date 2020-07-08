@@ -1,7 +1,10 @@
+'use strict';
+
 module.exports = {
-  extends: "recommended",
+  extends: 'octane',
   rules: {
-    "no-triple-curlies": true,
-    "block-indentation": 4
+    'no-implici-this': {
+      allow: [''] //required by ember-set-helper
+    }
   }
-};
+}
