@@ -8,39 +8,12 @@
       </li>
     {{/each}}
   </ul>
-  <div>
-    {{#if this.isAddingBand}}
-      <input 
-        @type="text" 
-        @valu={{this.newBandName}} 
-        placeholder="New band" 
-        aria-label="new band"
-      >
-      <button 
-        type="button" 
-        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0 px-1 border border-gray-400 rounded shadow"
-        {{on "click" this.saveBand}}
-      >
-        Add
-      </button>
-      <button 
-        type="button" 
-        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0 px-1 border border-gray-400 rounded shadow"
-        {{on "click" this.cancelAddBand}}
-      >
-        Cancel
-      </button>
-    {{else}}
-      <button 
-        type="button" 
-        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0 px-1 border border-gray-400 rounded shadow"
-        {{on "click" this.addBand}}
-      >
-        Add new band
-      </button>
-    {{/if}}
-    
-  </div>
+  <LinkTo
+    @route="bands.new"
+    class="inline-block ml-2 mt-2 p-2 rounded bg-purple-600 shadow-md hover:shadow-lg hover:text-white hover:bg-purple-500 focus:outline-none"
+  >
+    Add Band
+  </LinkTo>
 </div>
 <div class="w-2/3 px-2">
   {{outlet}}
