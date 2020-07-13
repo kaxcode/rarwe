@@ -1,6 +1,28 @@
 import Route from '@ember/routing/route';
-import Band from 'rarwe/models/band';
-import Song from 'rarwe/models/song';
+import { tracked } from '@glimmer/tracking';
+
+class Band {
+  @tracked name;
+  @tracked songs;
+
+  constructor({ name, slug, songs }) {
+    this.name = name;
+    this.slug = slug;
+    this.songs = songs;
+  }
+}
+
+export class Song {
+  title = '';
+  rating = 0;
+  band = '';
+
+  constructor({ title, rating, band }) {
+    this.title = title;
+    this.rating = rating;
+    this.band = band;
+  }
+}
 
 export default class BandsRoute extends Route {
   model() {
