@@ -1,8 +1,8 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { dasherize } from '@ember/string';
-import { Band } from 'rarwe/routes/bands';
 import { inject as service } from '@ember/service';
+import Band from 'rarwe/models/band';
 
 export default class BandsNewController extends Controller {
   @service catalog;
