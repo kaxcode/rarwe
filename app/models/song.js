@@ -3,9 +3,10 @@ export default class Song {
   rating = 0;
   band = '';
 
-  constructor({title, rating, band}) {
+  constructor({title, rating, band}, relationships={}) {
     this.title = title;
     this.rating = rating;
     this.band = band;
+    this.relationships = relationships;
   }
 }
